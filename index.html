@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "LunchCheck">
 <head>
 
 	<title>Solution To Module 1! By winterroll</title>
 	<script type="text/javascript" src="angular.min.js"></script>
-	<script type="text/javascript" src="scritp.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 
 </head>
-<body>
+<body ng-controller = "LunchCheckController">
 	<h1>Hello! can you tell me what you wish to had for lunch? </h1>
+	<p>Please use comma to sepreate each lunch item!</p>
+	<input id="LunchInputBox" type="text" ng-model = "lunchString">
+	<button ng-click = "checkLunchItem();">Check If Too Much</button>
+	<p>{{response}}</p>
 
-	
 </body>
 </html>
